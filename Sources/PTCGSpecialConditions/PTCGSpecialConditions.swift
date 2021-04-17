@@ -3,7 +3,7 @@
  */
 public enum PTCGSpecialConditions {
     
-    enum ConditionLayer {
+    public enum ConditionLayer {
         /**
          * 「どく」の状態
          */
@@ -21,7 +21,7 @@ public enum PTCGSpecialConditions {
     /**
      * 状態異常区分
      */
-    var layer: ConditionLayer {
+    public var layer: ConditionLayer {
         switch self {
         case .poisoned(_):
             return .poisoned
@@ -70,7 +70,7 @@ public enum PTCGSpecialConditions {
      */
     case confused
 
-    var name: String {
+    public var name: String {
         switch self {
         case .poisoned(_):
             return "どく"
@@ -90,7 +90,7 @@ public enum PTCGSpecialConditions {
      * いくつかの特殊状態がかさなっているときは、次の順番でチェックする
      * どく -> やけど -> ねむり -> マヒ
      */
-    var checkPriority: Int? {
+    public var checkPriority: Int? {
         switch self {
         case .poisoned(_):
             return 4
@@ -106,7 +106,7 @@ public enum PTCGSpecialConditions {
         }
     }
     
-    var canEscaping: Bool {
+    public var canEscaping: Bool {
         switch self {
         case .poisoned(_), .burned, .confused:
             return true
@@ -115,7 +115,7 @@ public enum PTCGSpecialConditions {
         }
     }
     
-    var canUsingSkill: Bool {
+    public var canUsingSkill: Bool {
         switch self {
         case .poisoned(_), .burned, .confused:
             return true
