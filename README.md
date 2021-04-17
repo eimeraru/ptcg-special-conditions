@@ -10,7 +10,7 @@
 
 各種状態異常についての効果・条件を定義しているモジュールです
 
-| special condition | jp | image |
+| special condition | name_jp | image |
 | :--- | :---: | :---: |
 | Poisoned | (どく) | ![](layer_poisoned_marker.png) |
 | Burned | (やけど) | ![](layer_burned_marker.png) |
