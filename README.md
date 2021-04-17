@@ -1,6 +1,6 @@
 # PTCG Special Conditions
 
-![](special_conditions_icon.png)
+![](doc/special_conditions_icon.png)
 
 ## Requirements
 
@@ -12,11 +12,11 @@
 
 | special condition | name_jp | image |
 | :--- | :---: | :---: |
-| Poisoned | (どく) | ![](layer_poisoned_marker.png) |
-| Burned | (やけど) | ![](layer_burned_marker.png) |
-| Paralyzed | (マヒ) | ![](layer_rotation_side.png) |
-| Asleep | (ねむり) | ![](layer_rotation_side.png) |
-| Confused | (こんらん) | ![](layer_rotation_up_side_down.png) |
+| Poisoned | (どく) | ![](doc/layer_poisoned_marker.png) |
+| Burned | (やけど) | ![](doc/layer_burned_marker.png) |
+| Paralyzed | (マヒ) | ![](doc/layer_rotation_side.png) |
+| Asleep | (ねむり) | ![](doc/layer_rotation_side.png) |
+| Confused | (こんらん) | ![](doc/layer_rotation_up_side_down.png) |
 
 ## How to use
 
