@@ -1,6 +1,6 @@
 # PTCG Special Conditions
 
-![](special_condition_icon.png)
+![](special_conditions_icon.png)
 
 ## Requirements
 
