@@ -1,6 +1,6 @@
 # PTCG Special Conditions
 
-![](ptcg_flip_coin.gif)
+![](special_condition_icon.png)
 
 ## Requirements
 
