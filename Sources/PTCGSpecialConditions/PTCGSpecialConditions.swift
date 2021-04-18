@@ -24,8 +24,12 @@ public struct PTCGSpecialConditions {
         }
     }
     
+    public var all: Array<PTCGSpecialCondition> {
+        state.keys.compactMap({ state[$0] })
+    }
+    
     public func sorted() -> Array<PTCGSpecialCondition> {
-        return state.keys.compactMap({ state[$0] }).sorted { (lhs, rhs) -> Bool in
+        all.sorted { (lhs, rhs) -> Bool in
             (lhs.checkPriority ?? 0) > (rhs.checkPriority ?? 0)
         }
     }
