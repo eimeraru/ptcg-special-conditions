@@ -11,6 +11,8 @@ public struct PTCGSpecialConditions {
 
     private var state: [Layer : PTCGSpecialCondition] = [:]
 
+    public init() {}
+    
     public mutating func add(with specialCondition: PTCGSpecialCondition) {
         switch specialCondition {
         case .poisoned:
