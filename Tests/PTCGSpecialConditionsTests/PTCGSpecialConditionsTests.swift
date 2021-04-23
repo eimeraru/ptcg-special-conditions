@@ -19,6 +19,17 @@ final class PTCGSpecialConditionsTests: XCTestCase {
         let empty = PTCGSpecialConditions()
         XCTAssertEqual([], empty.sorted())
     }
+    
+    func testEqual() {
+        var tripleCondition = PTCGSpecialConditions()
+        tripleCondition.add(with: .burned)
+        tripleCondition.add(with: .poisoned(nil))
+        tripleCondition.add(with: .asleep)
+        XCTAssertEqual(PTCGSpecialConditions([.burned,
+                                              .poisoned(nil),
+                                              .asleep]),
+                       tripleCondition)
+    }
 
     static var allTests = [
         ("testSorted", testSorted),

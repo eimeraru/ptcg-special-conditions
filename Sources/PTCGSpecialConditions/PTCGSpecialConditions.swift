@@ -11,7 +11,12 @@ public struct PTCGSpecialConditions {
 
     private var state: [Layer : PTCGSpecialCondition] = [:]
 
-    public init() {}
+    public init(_ conditions: Array<PTCGSpecialCondition> = []) {
+        self.state = conditions
+            .reduce(into: [Layer : PTCGSpecialCondition](), { ret, c in
+                ret[self.layer(with: c)] = c
+            })
+    }
     
     public mutating func add(with specialCondition: PTCGSpecialCondition) {
         switch specialCondition {
@@ -65,6 +70,13 @@ extension PTCGSpecialConditions {
         }
     }
 }
+
+extension PTCGSpecialConditions: Equatable {
+    public static func ==(lhs: Self, rhs: Self) -> Bool {
+        lhs.sorted() == rhs.sorted()
+    }
+}
+
 
 extension PTCGSpecialConditions.Layer: Equatable {
     public static func ==(lhs: Self, rhs: Self) -> Bool {
